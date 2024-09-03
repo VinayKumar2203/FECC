@@ -1,11 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>responsive</title>
+    <style>
+        h1 {
+            border: 2px solid red;
+            background-color: aqua;
+        }
+
+        p {
+            border: 1px solid;
+        }
+
+        h3 {
+            background-color: burlywood;
+            color: crimson;
+        }
+/* small screen */
+        @media screen and (max-width:320px) {
+            h1 {
+                border: 3px solid green;
+                font-size: 25px;
+                background-color: rgb(188, 232, 232);
+            }
+        }
+/* medium screen */
+        @media all and (min-width:321px) and (max-width:650px) {
+            h1 {
+                border: 2px solid red;
+                font-size: 22px;
+                background-color: rgb(18, 199, 199);
+            }
+        }
+/* large screen */
+        @media screen and (min-width:651px){
+            h1 {
+                border: 3px solid;
+                font-size: 20px;
+                color: rgb(216, 216, 239);
+                background-color: rgb(9, 57, 57);
+            }
+            p{
+                font-size: 18px;
+            }
+        }
+
+    </style>
 </head>
+
 <body>
-    
+    <h1>I am creating a responsive website</h1>
+    <p>Hey! i am creating website with the help of css media queries</p>
+    <h3>
+        thx for coming in my website ..
+    </h3>
 </body>
+
 </html>

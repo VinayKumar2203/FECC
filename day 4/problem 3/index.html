@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            background-color: rgb(63, 40, 40);
+            color: aqua;
+            height: 100px;
+            width: 100%;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+            justify-content: space-evenly;
+            background-color: rgb(109, 73, 73);
+            color: aliceblue;
+            height: 40px;
+           margin-bottom: 15px;
+        }
+      img{
+        height: 100px;
+      }
+
+      main >  div {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        margin-bottom: 30px;
+      }
+      main >div>div{
+        text-align: center;
+      }
+      @media screen and (max-width:768px){
+        main >  div {
+            flex-direction: column;
+            
+        }
+        img{
+            width: 250px;
+            height: 250px;
+        }
+      }
+      @media screen and (max-width:768px){
+        nav {
+            flex-direction: column;
+            align-items: flex-start;
+            
+        }
+        nav > :nth-child(2){
+        display: none;
+        }
+        nav > :nth-child(3){
+        display: none;
+        }
+        nav > :nth-child(4){
+        display: none;
+        }
+        nav > :nth-child(5){
+        display: none;
+        }
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My PortFolio</h1>
+    </header>
+    <nav>
+        <div>Home</div>
+        <div>Education</div>
+        <div>Project</div>
+        <div>Skills</div>
+        <div>Contact Me</div>
+    </nav>
+    <main>
+        <div>
+            <div><img  src="https://preview.redd.it/zfohxnf8t3pa1.jpg?width=1024&format=pjpg&auto=webp&v=enabled&s=0f660e0a56476991ee3b97f2885d8c010fec5b97" alt=""></div>
+
+            <div>
+                <h2 >Home</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, minima.</p>
+            </div>
+        </div>
+        <div>
+            <div><img  src="https://preview.redd.it/zfohxnf8t3pa1.jpg?width=1024&format=pjpg&auto=webp&v=enabled&s=0f660e0a56476991ee3b97f2885d8c010fec5b97" alt=""></div>
+
+            <div>
+                <h2 >Education</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, minima.</p>
+            </div>
+        </div>
+        <div>
+            <div><img  src="https://preview.redd.it/zfohxnf8t3pa1.jpg?width=1024&format=pjpg&auto=webp&v=enabled&s=0f660e0a56476991ee3b97f2885d8c010fec5b97" alt=""></div>
+
+            <div>
+                <h2 >Project</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, minima.</p>
+            </div>
+        </div>
+        <div>
+            <div><img  src="https://preview.redd.it/zfohxnf8t3pa1.jpg?width=1024&format=pjpg&auto=webp&v=enabled&s=0f660e0a56476991ee3b97f2885d8c010fec5b97" alt=""></div>
+
+            <div>
+                <h2 >Skills</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, minima.</p>
+            </div>
+        </div>
+        <div>
+            <div><img  src="https://preview.redd.it/zfohxnf8t3pa1.jpg?width=1024&format=pjpg&auto=webp&v=enabled&s=0f660e0a56476991ee3b97f2885d8c010fec5b97" alt=""></div>
+
+            <div>
+                <h2 >Contact ME</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, minima.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
