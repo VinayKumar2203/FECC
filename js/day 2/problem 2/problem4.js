@@ -3,7 +3,7 @@ function printArray(n, arr) {
     for (let i = 0; i < n; i++) {
         let num = arr[i];
       
-        if (num%2==0) {
+        if (num%2==1) {
           console.log(num);
         }
     }
