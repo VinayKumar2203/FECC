@@ -99,12 +99,39 @@ let compareThreeNumbers3 = compareThreeNumbers(4, 5, 6)
 
 // C.Mathematical Operators*************************************
 // 1.basic Arithmetic:-
-let obj = {};
 
-function performArithmetic(work,workWithValue) {
-   obj[work]=workWithValue;  
+
+function performArithmetic(a, b, operators) {
+    let result;
+    switch (operators) {
+        case "+":
+            return a + b;
+            break;
+        case "-":
+            return a - b;
+            break;
+        case "*":
+            return a * b;
+            break;
+        case "/":
+            return a / b;
+            break;
+
+        default:
+            return "please put a valid thing"
+            break;
+    }
+    return {
+        a,
+        b,
+        operators,
+        result
+    };
 }
-let add =a+b;
-let value=2+8;
-performArithmetic(add,value)
-console.log(obj);
+let num1 =5;
+let num2=10;
+let operator = "+"
+let math = performArithmetic(num1,num2,operator);
+console.log(math);
+
+
