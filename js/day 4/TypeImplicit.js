@@ -33,3 +33,13 @@ let result = coerceInArithmetic(math1, math2,mark);
 // console.log(result);
 
 // ----------------------------implicit Coercion in Conditionals;-----------------------
+function coerceInConditionals(value) {
+    if (value==""||value==null||value==undefined||value==false||value==0||value==NaN) {
+        return "falsy";
+    }
+    else{
+        return "Truthy"
+    }
+}
+let ConditionalsResult= coerceInConditionals(54)
+console.log(ConditionalsResult);
