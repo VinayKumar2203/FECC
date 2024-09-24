@@ -1,3 +1,5 @@
+// Q.8 of Prototypes and prototypical inheritance syntax
+
 function Animal() {
     this.type="animail";    
 }
@@ -18,7 +20,10 @@ function Dog() {
 Dog.prototype.sound=function () {
     return `Bark`;
 }
+
+Object.setPrototypeOf(Dog.prototype,Animal.prototype)
+
 let d1=new Dog();
+console.log(d1.sound());
 console.log(d1);
 
-// Dog.prototype=Object.create(Animal.prototype)
