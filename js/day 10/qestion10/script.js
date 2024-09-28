@@ -1,3 +1,4 @@
+// let display1 = document.getElementById('display1');
 let start = document.querySelector('#start');
 let pause = document.getElementById('pause');
 let reset = document.getElementById('reset');
