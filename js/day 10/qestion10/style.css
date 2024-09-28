@@ -1,0 +1,19 @@
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ }
+
+#display{
+    border: 2px solid;
+    height: 15rem;
+    width: 15rem;
+    margin: auto;
+    text-align: center;
+    /* justify-content: center; */
+    gap: 10px;
+}
+button{
+    border: none;
+    
+}
