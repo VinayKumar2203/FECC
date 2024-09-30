@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search movies</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #main {
+            padding: 20px;
+        }
+
+        #display {
+            margin-top: 15px;
+            padding: 15px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+
+        }
+
+        #cont {
+            height: 350px;
+            width: 200px;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            border-radius: 15px;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        #image {
+            width: 100%;
+            height: 200px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <label> search:
+            <input type="text" name="" id="InputType" placeholder="search...">
+        </label>
+        <button id="btn">getMovie</button>
+    </div>
+    <div id="display"></div>
+    <button id="prevBtn">Previous</button>
+    <button id="nextBtn">Next</button>
+
+</body>
+
+</html>
+<script src="prob3.js"></script>
