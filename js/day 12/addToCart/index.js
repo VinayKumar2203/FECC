@@ -61,16 +61,23 @@ let user = [
     },
 ];
 let arrOfAddToCart = JSON.parse(localStorage.getItem('cart')) || [];
-let count = 0; // Initialize count globally
+let count = 0;
 
+ function upDateCounter(){
+     let addProduct = document.getElementById('addProduct');
+     addProduct.innerText= count;
+    // console.log('i am ',addProduct);
+    }
 user.forEach((userDetails) => {
     showData(userDetails);
 })
 
 function showData(detailsOFuser) {
-    let count = 0;
-    let addProduct = document.getElementById('addProduct').innerText;
+    // let count = 0;
     let displayData = document.getElementById("display");
+    
+    //of add to cart====================== 
+   
 
     let name = document.createElement('h2')
     let email = document.createElement('p');
@@ -90,8 +97,10 @@ function showData(detailsOFuser) {
     button.addEventListener("click", (event) => {
         alert(`${detailsOFuser.name} is now added the in cart`);
         // console.log(name, email)
-        addProduct.innerText = ++count;
-        console.log(addProduct);
+        ++count;
+        upDateCounter();
+        // console.log('co',count);
+        // console.log(addProduct);
         event.preventDefault();
         localStorage.setItem('UserName', detailsOFuser.name);
         localStorage.setItem('UserEmail', detailsOFuser.email);
@@ -100,12 +109,12 @@ function showData(detailsOFuser) {
             email: detailsOFuser.email
         }
         arrOfAddToCart.push(obj);
-        console.log(arrOfAddToCart);
+        // console.log(arrOfAddToCart);
         localStorage.setItem('cart', JSON.stringify(arrOfAddToCart));
     });
 
 
 
 }
-// button function start---------------
+
 
