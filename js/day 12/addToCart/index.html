@@ -21,20 +21,26 @@
         div>ul>a {
             margin-left: 20px;
             list-style-type: none;
-
+            text-decoration: none;
         }
-        #display{
+
+        div>ul>a:hover {
+            text-decoration: underline;
+        }
+
+        #display {
             display: grid;
-            grid-template-columns: repeat(3,1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 10px;
         }
-        
+
         #cont {
             border-radius: 10px;
             border: 1px solid;
             padding: 8px 15px;
         }
-        #btn{
+
+        #btn {
             cursor: pointer;
         }
     </style>
@@ -65,7 +71,6 @@
             </ul>
         </div>
     </nav>
-
     <!-- Show data here -->
     <div id="display">
 

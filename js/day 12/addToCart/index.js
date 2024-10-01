@@ -60,15 +60,18 @@ let user = [
         email: "Rey.Padberg@karina.biz",
     },
 ];
+let arrOfAddToCart = JSON.parse(localStorage.getItem('cart')) || [];
+let count = 0; // Initialize count globally
 
 user.forEach((userDetails) => {
     showData(userDetails);
 })
+
 function showData(detailsOFuser) {
-    // let count=0;
-    // let addProduct=document.getElementById('addProduct').innerText;
+    let count = 0;
+    let addProduct = document.getElementById('addProduct').innerText;
     let displayData = document.getElementById("display");
-    // console.log(detailsOFuser);
+
     let name = document.createElement('h2')
     let email = document.createElement('p');
     let button = document.createElement('button');
@@ -84,20 +87,21 @@ function showData(detailsOFuser) {
 
 
     // logic for addToCart--------------'
-    let arrOfAddToCart = [];
     button.addEventListener("click", (event) => {
+        alert(`${detailsOFuser.name} is now added the in cart`);
         // console.log(name, email)
-        // alert('this product is now added in cart');
+        addProduct.innerText = ++count;
+        console.log(addProduct);
         event.preventDefault();
         localStorage.setItem('UserName', detailsOFuser.name);
         localStorage.setItem('UserEmail', detailsOFuser.email);
         let obj = {
-            name:detailsOFuser.name,
-            email:detailsOFuser.email
+            name: detailsOFuser.name,
+            email: detailsOFuser.email
         }
         arrOfAddToCart.push(obj);
         console.log(arrOfAddToCart);
-        localStorage.setItem('cart',JSON.stringify(arrOfAddToCart));
+        localStorage.setItem('cart', JSON.stringify(arrOfAddToCart));
     });
 
 

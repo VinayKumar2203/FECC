@@ -1,8 +1,6 @@
 // here i am working in cart.js   
 
 function getAddToCart() {
-
-
     let cartVal = localStorage.getItem('cart');
     console.log(cartVal);
     if (cartVal) {
