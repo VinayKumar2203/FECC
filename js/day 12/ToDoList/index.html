@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: aqua;
+            padding: 10px 15px;
+            box-shadow: rgba(17, 17, 26, 0.3) 0px 1px 0px;
+        }
+
+        #putInput {
+            height: 300px;
+            width: 300px;
+            border: 2px solid;
+
+        }
+
+        .main {
+            display: flex;
+            justify-content: space-evenly;
+            margin: auto;
+            margin-top: 40px;
+
+        }
+
+        #addToDo {
+            display: flex;
+            margin: auto;
+            padding: 5px;
+            margin-top: 30px;
+        }
+
+        table {
+            border: 2px solid red;
+            padding: 10px;
+
+        }
+
+        #headingOfTable>th {
+            border: 2px solid rgb(108, 108, 12);
+            padding: 10px;
+            align-items: center;
+        }
+
+        #tableData>tr>td {
+            border: 2px solid saddlebrown;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div>
+            <h2>Home</h2>
+        </div>
+        <div>
+            <h3>Archive</h3>
+        </div>
+    </nav>
+    <div class="main">
+        <div id="putInput">
+            <div class="main">
+                <input type="text" id="inputValue">
+                <select name="" id="optValue">
+                    <option id="High" value="High">High</option>
+                    <option id="low" value="low">low</option>
+                    <option id="medium" value="medium">medium</option>
+                </select>
+            </div>
+            <div>
+                <button id="addToDo">Add ToDo</button>
+            </div>
+        </div>
+        <div>
+            <table id="table">
+                <thead>
+                    <tr id="headingOfTable">
+                        <th>Name</th>
+                        <th>Priority</th>
+                        <th>Status</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tableData">
+                    <!-- <tr>
+                        <td>vinay</td>
+                        <td>vinay</td>
+                        <td>vinay</td>
+                        <td>Delete</td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script src="script.js"></script>
