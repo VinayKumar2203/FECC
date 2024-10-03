@@ -16,32 +16,36 @@ const files = [
     { name: "image3.png", size: 250 },
     { name: "text3.txt", size: 175 },
     { name: "photo3.jpg", size: 450 },
-    { name: "document3.pdf", size: 750 }
-  ];
-  
-let obj={};
-let arr=[];
-let getEachFile=files.map((file)=>{
-    let size =file.size
+    { name: "document3.pdf", size: 750 }
+];
+
+let obj = {};
+let arr = [];
+let getEachFile = files.map((file) => {
+    let size = file.size
     return size
-}).reduce((acc,cru)=>{
-  return obj.totalFileSize=acc+cru;
-},0)
+}).reduce((acc, cru) => {
+    return obj.totalFileSize = acc + cru;
+}, 0)
 console.log(obj)
-let topFIVEvalu= files.map((topFiveFile)=>{
+let topFIVEvalu = files.map((topFiveFile) => {
     return topFiveFile
-}).sort((a,b)=>{
-    return b.size-a.size;
-}).slice(0,5)
+}).sort((a, b) => {
+    return b.size - a.size;
+}).slice(0, 5)
 console.log(topFIVEvalu);
 
-files.reduce((acc,file)=>{
-    let ext=file.name.split('.').pop();
-    
-        
-    
-},{})
-
+let fileExt = files.reduce((acc, file) => {
+    // console.log(file);
+    let ext = file.name.split('.').pop();
+    // console.log(ext);
+    if (!acc[ext]) {
+        acc[ext] = [];
+    }
+    acc[ext].push(file.name);
+        return acc;
+}, {});
+console.log(fileExt);
 
 // this is the output..............
 
@@ -63,4 +67,3 @@ files.reduce((acc,file)=>{
 //       csv: ["data1.csv", "data2.csv"]
 //     }
 //   }
-  
