@@ -1,0 +1,119 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Form styles */
+#inputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+#inputs input {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+#inputs button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#inputs button:hover {
+    background-color: #4cae4c;
+}
+
+/* Buttons for sorting */
+#btns {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#btns button {
+    padding: 10px 15px;
+    margin: 10px;
+    background-color: #0275d8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btns button:hover {
+    background-color: #025aa5;
+}
+
+/* Search input */
+#search {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    width: 60%;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* Playlist display */
+#display {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for each song's details */
+.detailsOfPlayList {
+    display: flex;
+    justify-content: space-between; /* Spread items evenly */
+    align-items: center; /* Vertically center items */
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-weight: bold;
+    color: #333;
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    #inputs input, #search {
+        width: 90%;
+    }
+
+    #btns button {
+        width: 45%;
+    }
+
+    #display {
+        width: 90%;
+    }
+}

@@ -3,10 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music File</title>
+    <title>music PlayList</title>
+    <link rel="shortcut icon" href="https://www.bing.com/th?id=OIP.tLotgCDtzgTdwJcTiXWRCwHaEK&w=165&h=100&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Music File</h1>
-    
+    <h1>music PlayList</h1>
+    <div id="inputs">
+         <input type="text" placeholder="Song Title" id="songTitle">
+         <input type="text" placeholder="Artist" id="artist">
+         <input type="text" placeholder="Duration" id="duration">
+         <input type="text" placeholder="Genre" id="genre">
+         <button id="addSong">Add Song</button>
+    </div>
+    <div id="btns">
+       <button id="SortByTitle">Sort By Title</button>
+       <button id="SortByArtist">Sort By Artist </button>
+       <button id="SortByDuration">Sort By Duration </button>
+       <button id="SortByGenre">Sort By Genre </button>
+    </div>
+    <input type="text" id="search" placeholder="search by title or artist">
+    <h1>YourPlayList</h1>
+    <div id="display">
+         
+    </div>
 </body>
 </html>
+<script src="script.js"></script>
