@@ -20,6 +20,7 @@ function addSongs() {
         playList.push(song);
         console.log(playList);
         displayData();
+        localStorage.setItem('playlist', JSON.stringify(playList));
         clearForm();
     } else {
         alert('please cheak some details is empty ?');
@@ -28,7 +29,18 @@ function addSongs() {
 
 }
 
-function displayData(filteredSongs=null) {
+window.onload = () => {
+    const storedPlaylist = JSON.parse(localStorage.getItem('playlist'));
+    if (storedPlaylist) {
+        playList = storedPlaylist;
+        displayData();
+    }
+};
+
+
+
+
+function displayData(filteredSongs = null) {
     let display = document.getElementById("display");
     display.innerText = '';
     const songsToDisplay = filteredSongs || playList;
@@ -96,19 +108,73 @@ function clearForm() {
 }
 
 
-document.getElementById('search').addEventListener('input',()=>{
+document.getElementById('search').addEventListener('input', () => {
     let query = document.getElementById("search").value.toLowerCase();
     console.log(query);
     let filteredSongs = playList.filter((song) => {
         return song.songTitle.toLowerCase().includes(query) || song.artist.toLowerCase().includes(query)
     })
-    if (filteredSongs.length >0) {
+    if (filteredSongs.length > 0) {
         displayData(filteredSongs);
     }
-    else{
+    else {
+
         alert("No result found");
         displayData();
     }
 
-
 });
+
+function shortTitle() {
+    playList.sort((a, b) => {
+        if (a.songTitle.toLowerCase() < b.songTitle.toLowerCase()) return -1;
+        if (a.songTitle.toLowerCase() > b.songTitle.toLowerCase()) return 1;
+        return 0;
+    });
+
+    displayData();
+}
+
+let SortByTitle = document.getElementById('SortByTitle');
+SortByTitle.addEventListener('click', () => shortTitle())
+
+function SortArtist() {
+    playList.sort((a, b) => {
+        if (a.artist.toLowerCase() < b.artist.toLowerCase()) return -1;
+        if (a.artist.toLowerCase() > b.artist.toLowerCase()) return 1;
+        return 0;
+    });
+
+    displayData();
+}
+
+let SortByArtist = document.getElementById('SortByTitle');
+SortByArtist.addEventListener('click', () => SortByArtist())
+
+
+function SortDuration() {
+    playList.sort((a, b) => {
+        if (a.duration.toLowerCase() < b.duration.toLowerCase()) return -1;
+        if (a.duration.toLowerCase() > b.duration.toLowerCase()) return 1;
+        return 0;
+    });
+
+    displayData();
+}
+
+let SortByDuration = document.getElementById('SortByDuration');
+SortByDuration.addEventListener('click', () => SortDuration())
+
+
+function SortGenre() {
+    playList.sort((a, b) => {
+        if (a.genre.toLowerCase() < b.genre.toLowerCase()) return -1;
+        if (a.genre.toLowerCase() > b.genre.toLowerCase()) return 1;
+        return 0;
+    });
+
+    displayData();
+}
+
+let SortByGenre = document.getElementById('SortByGenre');
+SortByGenre.addEventListener('click', () => SortGenre())
