@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page</title>
+    <style>
+        #display {
+            padding: 20px;
+            width: 75%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;            
+            grid-template-columns: repeat(3,1fr); 
+            gap: 40px;
+        }
+        #display div{
+            height: auto;
+            width: 200px;
+            border: 2px solid red;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+        img{
+            width: 100%;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div>
+        <select name="" id="category">
+            <option value="">Chosse by category</option>
+            <option value="men's clothing">men</option>
+            <option value="women's clothing">women</option>
+            <option value="electronics">electronic</option>
+            <option value="jewelery">jewelery</option>
+        </select>
+    </div>
+    <div id="display">
+
+    </div>
 </body>
+
 </html>
 <script src="script.js"></script>

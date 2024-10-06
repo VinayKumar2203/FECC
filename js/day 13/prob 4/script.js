@@ -239,5 +239,66 @@ let products = [
             count: 145
         }
     }
-]
+];
 
+// products.forEach((ele) => {
+//     displayFun(ele)
+// })
+let display = document.getElementById("display");
+displayFun(products)
+function displayFun(items) {
+    display.innerHTML='';
+    items.forEach((item) => {
+        
+    
+        let div1 = document.createElement('div');
+    
+        let title = document.createElement('p')
+        title.innerText = `Title:-${item.title}`;
+    
+        let price = document.createElement('p')
+        price.innerText = `Price:-${item.price}`;
+    
+        let description = document.createElement('p')
+        description.innerText = `description:-${item.description}`;
+    
+        let image1 = document.createElement('p')
+        image1.innerHTML = `<img src="${item.image}" alt="Example Image">`
+    
+        let category = document.createElement('p')
+        category.innerText = item.category;
+    
+        let rating = document.createElement('p')
+        rating.innerText = `Rating:-${item.rating.rate}`;
+    
+    
+        let count = document.createElement('p')
+        count.innerText = `Count:-${item.rating.count}`;
+    
+        div1.append(image1, title, description, price, rating, count)
+        display.append(div1);
+})
+
+}
+
+let category=document.getElementById('category');
+category.addEventListener('change',()=>{
+    // console.log(category.value);
+    let getValue=category.value;
+    // console.log(getValue)
+ chngeCatetory(getValue);
+})
+
+
+function chngeCatetory(changeCatValue) {
+if (changeCatValue === 'categoryAll') {
+    displayFun(products);
+} else {
+    let filterData=  products.filter((eleVal)=>{
+        // console.log(eleVal.category==changeCatValue)
+        return eleVal.category==changeCatValue;
+       });
+       displayFun(filterData);
+    
+}
+}
