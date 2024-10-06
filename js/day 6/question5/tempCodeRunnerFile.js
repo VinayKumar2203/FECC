@@ -1,6 +1,7 @@
-oungVotes',numYoungVotes)
-// console.log('numYoungPeople',numYoungPeople)
-// console.log('numMidVotesPeople',numMidVotesPeople)
-// console.log('numMidsPeople',numMidsPeople)
-// console.log('numOldVotesPeople',numOldVotesPeople)
-// console.log('numOldsPeople',numOldsPeo
+const fruits = ["Apple", "Banana", "Orange", "Mango", "Pineapple", "Grapes", "Strawberry", "Watermelon", "Peach", "Kiwi"];
+
+console.log(rearrangeFruits(fruits));
+
+
+// ["Strawberry", "Watermelon", "Peach", "Kiwi", "Apple", "Banana", "Orange", "Mango", "Pineapple", "Grapes"];
+
