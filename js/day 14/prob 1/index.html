@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>dom 3rd</h1>
+    <!-- <h1>dom 3rd</h1> -->
+    <!-- question 6 of dom  -->
+    <form action="" id="myForm">
+        <label for="name"> Name:</label>
+        <input title="Only put alphabet" pattern=" [A-Za-z]+" name="userName" id="userName" type="text" placeholder="enter Your name" required>
+        <br><br>
+        <label for="mail"> Email:</label>
+        <input id="userEmail" name="userEmail"  placeholder="enter Your Email" type="email" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
+        <br><br>
+        <label for="password"> Password:</label>
+        <input id="userPassword" name="userPassword"  placeholder="enter Your Password" type="password"
+            required pattern=".{8,}" title="eight or more characters">
+        <br><br>
+        <input id="btn" type="submit" value="submit">
+    </form>
 </body>
+
 </html>
 <script src="script.js"></script>
