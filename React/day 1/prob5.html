@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>JSX and Babel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<style>
+    #main {
+        padding: 15px;
+    }
+
+    img {
+        width: 100%;
+        /* height: 400px; */
+    }
+
+    #features {
+        border-top: 1px solid rgb(52, 184, 184);
+        border-bottom: 1px solid rgb(10, 78, 78);
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    }
+    #addToCart{
+        width: 100%;
+        padding: 10px;
+        color: wheat;
+        font-size: x-large;
+        border-radius: 10px;
+        background-color: #360909;
+        
+        }
+</style>
+
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        // Your JSX code here
+        const container = document.getElementById('root');
+        const root = ReactDOM.createRoot(container);
+        let url = "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=400";
+
+        let val =
+            <>
+                <div id='main'>
+                    <img src={url} alt="watchImg" />
+                    <h1>Automatic Watch</h1>
+                    <p>$350.00 USD</p>
+
+                    <div>
+                        <p style={{ color: 'pink' }}>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus neque sit porro, quae nesciunt commodi molestias, excepturi provident corporis quasi blanditiis. Assumenda laboriosam officiis aspernatur deserunt nulla rem dolores quas.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit atque laudantium repudiandae nihil quaerat impedit, esse vitae illo, pariatur labore quidem nostrum quasi obcaecati omnis voluptas consequuntur. Exercitationem, alias beatae!</p>
+                    </div>
+                    <div id='features'>
+                        <p style={{ color: "gold" }}>FEATURES</p>
+                        <div>
+                            <p>Chronograph</p>
+                            <p>Master Chronometer Certifield</p>
+                            <p>Tachymeter</p>
+                        </div>
+                        <div>
+                            <p>Anti-magnetic</p>
+                            <p>Chronometer</p>
+                            <p>Small seconds</p>
+                        </div>
+                    </div>
+
+                    <div id='productDetails'>
+                        <h3>PRODUCT DETAILS</h3>
+                        <p> <strong>Between lungs</strong>:20mm </p>
+                        <p> <strong>Bracelet</strong>:legther strap </p>
+                        <p> <strong>Case</strong>:42 mm </p>
+                        <p> <strong>Dial color</strong>:Black</p>
+                        <p> <strong>Crystal</strong>:Domed,scratch-resistant sapphire crystal with anit-reflective treatment inside</p>
+                        <p> <strong>Water resistance</strong>:5 bar(50 meters/167feet)</p>
+                        </div>
+                            
+                            <button id='addToCart'>ADD TO CART</button>
+                          
+                            <p style={{textAlign:'center'}}><i class="fa-solid fa-truck"></i> 2-3 business days deliver</p>
+                </div>
+            </>
+        root.render(val);
+    </script>
+</body>
+
+</html>
