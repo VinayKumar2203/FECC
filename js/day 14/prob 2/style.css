@@ -1,0 +1,12 @@
+label{
+    display: block;
+    margin: 10px;
+}
+#inputs{
+    border: 2px solid;
+    margin: auto;
+    text-align: center;
+    height: auto;
+    padding: 10px;
+    width: 200px;
+}
