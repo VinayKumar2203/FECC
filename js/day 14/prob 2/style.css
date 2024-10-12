@@ -10,3 +10,17 @@ label{
     padding: 10px;
     width: 200px;
 }
+#graph{
+    display: flex;
+    justify-content: space-evenly;
+}
+.gethringData{
+    border: 1px solid;
+    padding: 10px;
+    margin: 10px;
+}
+#shortBtn{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 15px;
+}
