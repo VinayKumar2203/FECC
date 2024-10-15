@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template</title>
+    <style>
+        #showData {
+            /* border: 1px solid red; */
+            width: 72%;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+        }
+
+        span {
+            background-color: rgb(148, 187, 222);
+            padding: 0px 10px;
+            font-size: larger;
+            margin: 10px;
+        }
+
+        #box {
+            border: 1px solid;
+            margin: 10px;
+            width: 250px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+<script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+<script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    // Your  code will go here
+    function ThreeCom({ count, head, details }) {
+        return (
+            <>
+                <div id='box'>
+                    <span>{count}</span>
+                    <h2>{head}</h2>
+                    <p>{details}</p>
+                </div>
+            </>
+        )
+    };
+
+    function App() {
+        let count = 1;
+
+        return (
+            <>
+                <h1 style={{ textAlign: 'center' }}>Getting start in 3 easy steps</h1>
+                <div id='showData'>
+
+                    <ThreeCom count={1} head={"find your template"} details={'every template is embadded within an iframe, so you can easily check what they look like and test the responsive behav'} />
+                    <ThreeCom count={2} head={"Copy the code"} details={'every template is embadded within an iframe, so you can easily check what they look like and test the responsive behav'} />
+                    <ThreeCom count={3} head={"Enjoy your free time"} details={'every template is embadded within an iframe, so you can easily check what they look like and test the responsive behav'} />
+                </div>
+            </>
+        )
+    };
+    let root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />)
+</script>
+
+</html>
