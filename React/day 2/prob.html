@@ -1,11 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
 </body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template</title>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+<script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+<script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    // Your  code will go here
+    function ButtonWithCounter() {
+        let [count, setCount] = React.useState(0);
+        function handleClick() {
+            setCount(count + 1)
+        }
+        return (
+            <>
+                <button onClick={handleClick}>click me</button>
+                <h3>counter {count}</h3>
+            </>
+        )
+    }
+
+    function App() {
+        return (
+            <>
+                <ButtonWithCounter />
+                <p>hello</p>
+            </>
+        )
+    }
+    let root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />)
+</script>
+
 </html>
