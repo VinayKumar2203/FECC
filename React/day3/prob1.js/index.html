@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template</title>
+    <style>
+        .card {
+            border: 1px solid red;
+            width: 300px;
+            margin: 15px;
+        }
+
+        .card h2 {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+<script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+<script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    // Your  code will go here
+    function GreetingCard({ greeting, name }) {
+        return (
+            <div className='card'>
+                <h2>{greeting} {name}</h2>
+            </div>
+        )
+    }
+
+    function App() {
+        let arr = [
+            { name: "Neha", greeting: "happy birthday!," },
+            { name: "vinay", greeting: "happy birthday!," },
+            { name: "kapil", greeting: "happy birthday!," },
+            { name: "lalit", greeting: "happy birthday!," },
+        ]
+        return (
+            <>
+
+                {
+                    arr.map((e) => {
+                        return GreetingCard({ name: e.greeting, greeting: e.name })
+                    })
+                }
+            </>
+        )
+    }
+    let root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />)
+</script>
+
+</html>
