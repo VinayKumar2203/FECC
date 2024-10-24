@@ -39,31 +39,35 @@
                         <input value={text} onChange={(e) => setText(e.target.value)} type="text" placeholder="add ToDo" />
                     </label>
                     <button onClick={(e) => {
-                      if (text=='') {
-                        alert("please put some value")
-                      } else {
-                        setTodos([
-                            ...todos,
-                            { id: id++, text: text }
-                        ])
-                        setText('')
-                      }
+                        if (text == '') {
+                            alert("please put some value")
+                        } else {
+                            setTodos([
+                                ...todos,
+                                { id: id++, text: text }
+                            ])
+                            setText('')
+                        }
                     }}>submit</button>
 
                 </div>
                 <div>
-                    display here
+                    <h3>display here</h3>
                     <ul>
                         {todos.map((todo) => (
                             <li key={todo.id}> {todo.text}
+                                <input type="checkbox" onChange={(e) => {
+                                   console.dir(e.target.checked)
+                                  
+                                }} />
                                 <button onClick={() => {
                                     setTodos(
-                                         todos.filter(e => e.id !== todo.id)
+                                        todos.filter(e => e.id !== todo.id)
                                     );
                                 }}>remove</button>
                                 <button onClick={() => {
-                                    alert('neha')
-                                      
+                                    alert('this part is pending ? ')
+
                                 }}>edit</button>
                             </li>
                         ))}
