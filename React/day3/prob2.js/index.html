@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template for todos</title>
+    <style>
+        .card {
+            border: 1px solid red;
+            width: 300px;
+            margin: 15px;
+        }
+
+        .card h2 {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+<script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+<script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    // Your  code will go here
+    let id = 0;
+    function ToDoList() {
+
+        let [text, setText] = React.useState('');
+        let [todos, setTodos] = React.useState([]);
+        return (
+            <div>
+                <div>
+                    <h1>ToDoList {text}</h1>
+                    <label>
+                        <input value={text} onChange={(e) => setText(e.target.value)} type="text" placeholder="add ToDo" />
+                    </label>
+                    <button onClick={(e) => {
+                      if (text=='') {
+                        alert("please put some value")
+                      } else {
+                        setTodos([
+                            ...todos,
+                            { id: id++, text: text }
+                        ])
+                        setText('')
+                      }
+                    }}>submit</button>
+
+                </div>
+                <div>
+                    display here
+                    <ul>
+                        {todos.map((todo) => (
+                            <li key={todo.id}> {todo.text}
+                                <button onClick={() => {
+                                    setTodos(
+                                         todos.filter(e => e.id !== todo.id)
+                                    );
+                                }}>remove</button>
+                                <button onClick={() => {
+                                    alert('neha')
+                                      
+                                }}>edit</button>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+        )
+    }
+
+    function App() {
+
+        return (
+            <>
+                <ToDoList />
+            </>
+        )
+    }
+    let root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />)
+</script>
+
+</html>
