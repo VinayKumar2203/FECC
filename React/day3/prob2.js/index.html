@@ -28,7 +28,6 @@
     // Your  code will go here
     let id = 0;
     function ToDoList() {
-
         let [text, setText] = React.useState('');
         let [todos, setTodos] = React.useState([]);
         return (
@@ -44,22 +43,31 @@
                         } else {
                             setTodos([
                                 ...todos,
-                                { id: id++, text: text }
+                                { id: id++, text: text, isCompleted: true }
                             ])
                             setText('')
                         }
                     }}>submit</button>
-
                 </div>
                 <div>
+
                     <h3>display here</h3>
                     <ul>
                         {todos.map((todo) => (
                             <li key={todo.id}> {todo.text}
-                                <input type="checkbox" onChange={(e) => {
-                                   console.dir(e.target.checked)
-                                  
-                                }} />
+                                <input type="checkbox" checked={todo.isCompleted}
+                                    onChange={(e) =>
+                                      setTodos(
+                                        todos.map((item) => {
+                                            if (todo.id === item.id) {
+                                                return { ...item, isCompleted: e.target.checked }
+                                            }
+                                            return item;
+                                        })
+                                      )
+                                    }
+
+                                />
                                 <button onClick={() => {
                                     setTodos(
                                         todos.filter(e => e.id !== todo.id)
@@ -67,7 +75,6 @@
                                 }}>remove</button>
                                 <button onClick={() => {
                                     alert('this part is pending ? ')
-
                                 }}>edit</button>
                             </li>
                         ))}
