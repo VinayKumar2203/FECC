@@ -8,6 +8,9 @@ function EffectComp() {
     fetch('https://jsonplaceholder.typicode.com/users')
       .then(response => response.json())
       .then(json => setApis(json))
+      .catch((error) => {
+        console.log(error);
+      })
   }, [])
 
   return <>
@@ -30,6 +33,42 @@ function EffectComp() {
 
 }
 
+function MouseTracker() {
+  let [mouseX, setMouseX] = useState(0);
+  let [mouseY, setMouseY] = useState(0);
+
+  useEffect(() => {
+    let handleMouseMove = (e) => {
+      setMouseX(e.clientX)
+      setMouseY(e.clientY)
+    }
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    }
+  },[]);
+  
+  return <>
+    <h1>Mouse Position: X-{mouseX}, Y-{mouseY}</h1>
+  </>
+}
+
+
+function TitleUpdater() {
+  const [count, setCount] = useState(0);
+   
+  useEffect(()=>{
+        document.title=`Count :${count}`
+        console.log( document.title=`Count :${count}`)
+  },[count]);
+
+  return <>
+  <p>{count}</p>
+    <button onClick={()=>{setCount(count+1)}}>count Increase</button>
+  </>
+}
+
 
 
 function App() {
@@ -37,6 +76,8 @@ function App() {
     <>
       <h1>React problem 2</h1>
       <EffectComp />
+      <TitleUpdater/>
+      <MouseTracker/>
     </>
   )
 }
