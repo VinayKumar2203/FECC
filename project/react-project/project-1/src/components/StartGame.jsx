@@ -1,32 +1,57 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function StartGame() {
+    let arr = [1, 2, 3, 4, 5, 6];
+    let [selectNumber, setSelecteNumber] = useState(0);
+    let [dice, setDice] = useState(1);
+    let [score, setScore] = useState(0);
+    function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+    console.log("rendom number", getRndInteger(1, 7))
+    console.log("selectNumber", selectNumber);
+    console.log("dice", dice);
     return (
         <div>
             <h1>Game StartGame</h1>
             <div className='startGame'>
                 <div>
-                    <h1>0</h1>
+                    <h1>{score}</h1>
                     <h2>Total Score</h2>
                 </div>
                 <div className='selectNumber'>
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
-                    <button>4</button>
-                    <button>5</button>
-                    <button>6</button>
+                    {arr.map((val, i) => {
+                        return <button key={i} onClick={() => {
+                            setSelecteNumber(val);
+                        }}>{val}</button>
+                    })}
                     <h3>selected Number</h3>
                 </div>
             </div>
             <div className='diceScore'>
                 <div>
-                    <img src="/images/dice_1.png" alt="dice_1.png" />
+                    <img src={`/images/dice_${dice}.png`} alt={`dice_${dice}.png`} />
+
                     <h3>Click on Dice to roll</h3>
                 </div>
                 <div>
-                    <button>Reset Score</button>
+                    <button onClick={() => {
+                        setDice(getRndInteger(1, 7))
+                        if (dice == selectNumber) {
+                            setScore(score + dice);
+                        }
+                        else {
+                            setScore(score - 2);
+                        }
+                    }}>change dice</button>
+                    <button onClick={() => {
+                        setScore(0);
+                        setSelecteNumber(0);
+                        setDice(1);
+                    }}>Reset</button>
+
                 </div>
+
 
             </div>
         </div>
