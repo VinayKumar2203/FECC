@@ -5,15 +5,15 @@ import HomePage from './components/HomePage'
 import StartGame from './components/StartGame'
 
 function App() {
-let [isGameStart,setIsGameStart]=useState(false);
-function toggleVlaue() {
-  setIsGameStart(pre=>!pre);
-}
+  let [isGameStart, setIsGameStart] = useState(false);
 
+  function toggleVlaue() {
+    setIsGameStart(pre => !pre);
+  }
+ 
   return (
     <>
-      {isGameStart ? <StartGame />:<HomePage toggle={toggleVlaue} />}
-   
+      {isGameStart ? <StartGame toggle={toggleVlaue} /> : <HomePage toggle={toggleVlaue} />}
     </>
   )
 }

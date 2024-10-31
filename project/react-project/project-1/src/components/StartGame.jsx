@@ -1,6 +1,7 @@
-import  { useState } from 'react'
+import { useState } from 'react'
+import HomePage from './HomePage';
 
-function StartGame() {
+function StartGame({toggle}) {
     let arr = [1, 2, 3, 4, 5, 6];
     let [selectNumber, setSelecteNumber] = useState(0);
     let [dice, setDice] = useState(1);
@@ -8,9 +9,12 @@ function StartGame() {
     function getRndInteger(min, max) {
         return Math.floor(Math.random() * (max - min)) + min;
     }
-    console.log("rendom number", getRndInteger(1, 7))
-    console.log("selectNumber", selectNumber);
-    console.log("dice", dice);
+
+    // console.log("rendom number", getRndInteger(1, 7))
+    // console.log("selectNumber", selectNumber);
+    // console.log("dice", dice);
+
+
     return (
         <div>
             <h1>Game StartGame</h1>
@@ -25,7 +29,7 @@ function StartGame() {
                             setSelecteNumber(val);
                         }}>{val}</button>
                     })}
-                    <h3>selected Number</h3>
+                    <h3>selected Number {selectNumber}</h3>
                 </div>
             </div>
             <div className='diceScore'>
@@ -37,11 +41,15 @@ function StartGame() {
                 <div>
                     <button onClick={() => {
                         setDice(getRndInteger(1, 7))
-                        if (dice == selectNumber) {
-                            setScore(score + dice);
+                        if (dice === selectNumber) {
+                            setScore((preScore) => preScore + dice);
+                            // alert('Guessed right ');
+
                         }
                         else {
-                            setScore(score - 2);
+                            setScore((preScore) => preScore - 2);
+                            // alert("Missed !")
+
                         }
                     }}>change dice</button>
                     <button onClick={() => {
@@ -49,10 +57,9 @@ function StartGame() {
                         setSelecteNumber(0);
                         setDice(1);
                     }}>Reset</button>
+                    <button onClick={toggle}>Game Start</button>
 
                 </div>
-
-
             </div>
         </div>
     )
