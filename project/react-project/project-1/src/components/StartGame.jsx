@@ -1,13 +1,16 @@
 import { useState } from 'react'
 import HomePage from './HomePage';
 
-function StartGame({toggle}) {
+function StartGame({ toggle }) {
     let arr = [1, 2, 3, 4, 5, 6];
     let [selectNumber, setSelecteNumber] = useState(0);
     let [dice, setDice] = useState(1);
     let [score, setScore] = useState(0);
+
+
     function getRndInteger(min, max) {
         return Math.floor(Math.random() * (max - min)) + min;
+        
     }
 
     // console.log("rendom number", getRndInteger(1, 7))
@@ -25,7 +28,8 @@ function StartGame({toggle}) {
                 </div>
                 <div className='selectNumber'>
                     {arr.map((val, i) => {
-                        return <button key={i} onClick={() => {
+                        return <button key={i} 
+                        onClick={() => {
                             setSelecteNumber(val);
                         }}>{val}</button>
                     })}

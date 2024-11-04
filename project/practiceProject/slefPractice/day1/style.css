@@ -1,0 +1,29 @@
+  body{
+    background-color: aliceblue;
+  }
+
+ .box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #fff;
+    height: 200px;
+    width: 300px;
+   border-radius: 8px;
+    margin: auto;
+}
+.stars{
+    background-color: whitesmoke;
+
+}
+h1{
+    color: #debbbb;
+}
+.star{color: rgb(228, 216, 216);
+      font-size: 25px;
+}
+
+.active{
+    color: gold;
+}
