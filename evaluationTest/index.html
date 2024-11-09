@@ -3,10 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
+    <title>fetch</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>test </h1>
+    <div class="searchDiv">
+        <label>
+            <input 
+            id="search"
+            type="text"
+            placeholder="Search..."
+            >
+        </label>
+    </div>
+    <div id="root"></div>
+    <div id="btn">
+        <button  onclick="prevfun()">prev</button>
+        <button  onclick="nextfun()">next</button>
+    </div>
 </body>
 </html>
-<script src="Question7.js"></script>
+<script src="evaluation.js"></script>

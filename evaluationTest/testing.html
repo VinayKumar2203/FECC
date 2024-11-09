@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        #root{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+        }
+        #root div{
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: rgba(0, 0, 0, 1.16) 0px 1px 4px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>testing</h1>
+    <label>
+        <input 
+        id="search"
+        type="text"
+        placeholder="Search..."
+        >
+    </label>
+    <div id="root"></div>
+    <div id="btn">
+        <button  onclick="prevfun()">prev</button>
+        <button  onclick="nextfun()">next</button>
+    </div>
+</body>
+</html>
+<script src="testing.js"></script>
