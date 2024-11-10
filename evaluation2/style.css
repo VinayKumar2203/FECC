@@ -1,0 +1,18 @@
+body{
+    text-align: center;;
+    justify-content: center;
+}
+#root{
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    text-align: center;
+    justify-content: left;
+}
+#root div{
+    /* border: 1px solid red; */
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+};
+
