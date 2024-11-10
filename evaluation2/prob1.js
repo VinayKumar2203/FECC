@@ -17,12 +17,19 @@ function fetchUser(page) {
             let end = start + postPerPage;
             let paginatation = filterUsers.slice(start, end);
             root.innerHTML = "";
+
+            if (selectValue.value === "asc") {
+                paginatedUsers.sort((a, b) => a.id - b.id);
+            } else if (selectValue.value === "desc") {
+                paginatedUsers.sort((a, b) => b.id - a.id);
+            }
+            // if (page === "asc") {
+            //     paginatedUsers.sort((a, b) => a.id - b.id);
+            // } else if (page === "desc") {
+            //     paginatedUsers.sort((a, b) => b.id - a.id);
+            // }
+
             displayData(paginatation);
-
-
-
-
-
         })
         .catch((err) => {
             console.log('this is err', err)
@@ -34,7 +41,6 @@ function fetchUser(page) {
 
 function displayData(posts) {
     posts.forEach(post => {
-
         let div = document.createElement('div');
         let p = document.createElement('p');
         let pId = document.createElement('p');
@@ -64,8 +70,9 @@ function prevBtn() {
     }
 }
 
-// selectValue.addEventListener('change', () => {
-//     console.log(selectValue.value)
-// })
+selectValue.addEventListener('change', () => {
+    console.log(selectValue.value)
+    fetchUser(currentPage);
+})
 
 fetchUser(currentPage);
