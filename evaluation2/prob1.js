@@ -19,16 +19,10 @@ function fetchUser(page) {
             root.innerHTML = "";
 
             if (selectValue.value === "asc") {
-                paginatedUsers.sort((a, b) => a.id - b.id);
+                paginatation.sort((a, b) => a.id - b.id);
             } else if (selectValue.value === "desc") {
-                paginatedUsers.sort((a, b) => b.id - a.id);
+                paginatation.sort((a, b) => b.id - a.id);
             }
-            // if (page === "asc") {
-            //     paginatedUsers.sort((a, b) => a.id - b.id);
-            // } else if (page === "desc") {
-            //     paginatedUsers.sort((a, b) => b.id - a.id);
-            // }
-
             displayData(paginatation);
         })
         .catch((err) => {
