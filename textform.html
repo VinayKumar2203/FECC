@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Blog</title>
+    <style>
+        .UpdateMainBox {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            height: auto;
+            width: 70%;
+            margin: auto;
+            border-radius: 10px;
+            padding: 25px;
+        }
+
+        form div {
+            margin: 10px;
+            text-align: left;
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+        }
+
+        input,
+        button {
+            width: 100%;
+            font-size: 18px;
+            padding: 5px;
+            border-radius: 8px;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="UpdateMainBox">
+        <form>
+            <div>
+                <label>Title:</label>
+                <input id="title" name="title" required type="text" class="input">
+            </div>
+            <div>
+                <label>Image:</label>
+                <input name="Image" id="Image" required type="file" class="input">
+            </div>
+            <div>
+                <label>Main Description:</label>
+                <input name="mainDescription" required id="mainDescription" type="text" class="input">
+            </div>
+            <div>
+                <label>Sub Title:</label>
+                <input name="subTitle" required id="subTitle" type="text" class="input">
+            </div>
+            <div>
+                <label>Sub Description:</label>
+                <input name="subDescription"required id="subDescription" type="text" class="input">
+            </div>
+            <div>
+                <label>Quotes:</label>
+                <input name="subDescription"required id="subDescription" type="text" class="input">
+            </div>
+            <div>
+                <label>Quotes Author:</label>
+                <input id="quotesAuthor"required name="quotesAuthor" type="text" class="input">
+            </div>
+            <div>
+                <label>Video Thumbnail:</label>
+                <input id="videoThumbnail"required name="videoThumbnail" type="text" class="input">
+            </div>
+            <div>
+                <label>Video Title:</label>
+                <input name="videoTitle"required id="videoTitle" type="text" class="input">
+            </div>
+            <div>
+                <label>Video Description:</label>
+                <input name="videoDescription"required id="videoDescription" type="text" class="input">
+            </div>
+            <div>
+                <label>Video Highlight Points:</label>
+                <input name="VideoHighLightPoints"required id="VideoHighLightPoints" type="text" class="input">
+            </div>
+            <div>
+                <label>Video YouTube Link:</label>
+                <input name="videoYouTube"required id="videoYouTube" type="url" class="input">
+            </div>
+            <div>
+                <label>Quotation Paragraph:</label>
+                <input name="quotationParagraph"required id="quotationParagraph" type="text" class="input">
+            </div>
+            <div>
+                <label>Last Paragraph:</label>
+                <input name="lastParagraph"required id="lastParagraph" type="text" class="input">
+            </div>
+            <div>
+                <label>Tags (comma separated):</label>
+                <input name="tagsCommaSeparated"required id="tagsCommaSeparated" type="text" class="input">
+            </div>
+            <div>
+                <label>Blog Author:</label>
+                <input name="blogAuthor"required id="blogAuthor" type="text" class="input">
+            </div>
+            <div>
+                <label>Category:</label>
+                <input name="category"required id="category" type="text" class="input">
+            </div>
+            <div>
+                <button type="submit">Update</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
