@@ -1,19 +1,22 @@
 import { useEffect, useRef, useState } from "react"
 
 const UseRefProb1 = () => {
-    const inputRef = useRef("")
-    let [text,setText]= useState('')
+    const inputRef = useRef(null)
+    let [text, setText] = useState('')
 
-    useEffect(()=>{
-         inputRef.current.focus();
-    },[])
+    useEffect(() => {
+        inputRef.current.focus();
+    }, [])
 
     function handleChange() {
         // inputRef.current.value
         // alert(inputRef.current.value)
         setText(inputRef.current.value)
     }
-    
+    function handleClear() {
+        inputRef.current.value='';
+        setText('');
+    }
     console.log(inputRef.current)
 
     return (
@@ -23,8 +26,9 @@ const UseRefProb1 = () => {
                 ref={inputRef}
                 onChange={handleChange}
             />
-
-            <p>here update the input value :-{text}</p>
+            <button onClick={handleClear} disabled={!text}>clear</button>
+            <p>here you see input value </p>
+            <h2 >:-{text}</h2>
         </div>
     )
 }
