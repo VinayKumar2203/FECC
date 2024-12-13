@@ -1,0 +1,131 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e1e;
+    color: white;
+    padding: 10px 20px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .brand-tata {
+    font-weight: bold;
+    color: white;
+  }
+  
+  .brand-cliq {
+    font-weight: bold;
+    color: magenta;
+  }
+  
+  .brand-fashion {
+    font-weight: bold;
+    color: cyan;
+  }
+  
+  .luxury-link {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+  }
+  
+  .navbar-center {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .dropdown {
+    margin-right: 15px;
+    cursor: pointer;
+  }
+  
+  .search-box {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 200px;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 14px;
+  }
+  
+  .icon {
+    font-size: 18px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .icon:hover {
+    color: #ccc;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start; /* Stack items vertically */
+    }
+  
+    .navbar-left,
+    .navbar-center,
+    .navbar-right {
+      width: 100%;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+  
+    .navbar-center {
+      display: flex;
+      flex-wrap: wrap; /* Allow search box to stack */
+    }
+  
+    .search-box {
+      width: 100%; /* Full-width search box for smaller screens */
+      margin-top: 5px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar {
+      padding: 10px;
+    }
+  
+    .nav-link {
+      font-size: 12px;
+      margin-right: 10px;
+    }
+  
+    .icon {
+      font-size: 16px;
+      margin-left: 5px;
+    }
+  }
+  

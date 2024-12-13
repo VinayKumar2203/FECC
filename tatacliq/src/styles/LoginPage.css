@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+
+
+.texTofCreate {
+    margin-top: 22px;
+    margin-bottom: 15px;
+}
+.truckTL{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+   gap: 10px;
+    
+}
+.truckimg{
+    /* border: 1px solid black; */
+    height: 40px;
+    width: 40px;
+    margin-top: 8%;
+}
+a{
+    text-decoration: none;
+ 
+}
+.truckimg img{
+    height: 100%;
+    width: 100%;
+}
+
+.texTofCreate h1 {
+    margin-top: 22px;
+}
+
+
+.container {
+    width: 100%;
+    background-image: url(/public/images/backgroundimg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.createAccountDiv {
+    width: 600px;
+    height: fit-content;
+    margin: auto;
+    /* margin: 163px auto; */
+    border-radius: 25px;
+    backdrop-filter: brightness(1.1);
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    box-shadow: rgba(0, 0, 0, .16) 0px 1px 4px;
+}
+
+.formDetails form {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+}
+
+form>div>div>input {
+    border: none;
+    height: 40px;
+    border-radius: 7px;
+    padding-left: 23px;
+    width: 350px;
+    font-weight: 400;
+    outline: none;
+    margin-bottom: 14px;
+
+}
+
+.lableBoth {
+    position: relative;
+}
+
+.emailLable {
+    position: absolute;
+    left: 144px;
+    /* right: 10px; */
+    top: -26px
+}
+
+.googleIcon {
+    height: 15px;
+    text-align: center;
+    width: 15px;
+    margin: auto;
+}
+
+.continueWithGoogle {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.continueWithGoogle button {
+    height: 40px;
+    width: 380px;
+    border-radius: 9px;
+    outline: none;
+    border: none;
+    background-color: #0024b4;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+
+.googleIconwithCotinue {
+    height: 40px;
+    width: 380px;
+    border: none;
+    border-radius: 9px;
+    background-color: black;
+    color: white;
+    font-size: medium;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.goToLoginPage {
+    margin-bottom: 30px
+}
+
+.goToLoginPage p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.goToLoginPage a {
+    text-decoration: none;
+}
+
+.passwordID {
+    position: relative;
+}
+
+.passwordLable {
+    position: absolute;
+    left: 144px;
+    /* right: 10px; */
+    top: -26px
+}
+.checkandforget{
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+  
+    margin-top: -27px;
+}
+.checkbox{
+    height: 10px;
+    width: 10px;
+}
+.eyeLogo {
+    position: absolute;
+    left: 440px;
+    top: 10px;
+    cursor: pointer;
+
+}
+
+.eyeLogo img {
+    height: 20px;
+    width: 20px;
+
+}
+
+@media only screen and (max-width: 600px) {
+    .createAccountDiv {
+        width: 400px;
+        /* margin: 150px auto; */
+    }
+
+    form>div>div>input {
+        height: 35px;
+        width: 300px;
+        font-weight: 400;
+        border-radius: 9px;
+
+    }
+
+    .eyeLogo {
+        position: absolute;
+        left: 315px;
+        top: 10px;
+        cursor: pointer;
+
+    }
+
+    .truckimg{
+        /* border: 1px solid green; */
+        height: 33px;
+        width: 33px;
+        margin-top: 11%;
+    }
+
+    .texTofCreate h1 {
+        font-size: x-large;
+    }
+
+    .continueWithGoogle button {
+        height: 40px;
+        width: 330px;
+        font-size: 16px;
+    }
+
+    .googleIconwithCotinue {
+        height: 40px;
+        width: 330px;
+        font-size: medium;
+        gap: 50px;
+    }
+
+    .goToLoginPage p {
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    .emailLable {
+        position: absolute;
+        left: 74px;
+        /* right: 10px; */
+        top: -26px
+    }
+
+    .passwordLable {
+        position: absolute;
+        left: 74px;
+        /* right: 10px; */
+        top: -26px
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .createAccountDiv {
+        width: 310px;
+        margin: 180px auto;
+    }
+
+    form>div>div>input {
+        height: 35px;
+        width: 220px;
+        font-weight: 400;
+
+    }
+
+    .eyeLogo {
+        position: absolute;
+        left: 235px;
+        top: 10px;
+        cursor: pointer;
+
+    }
+    .truckimg{
+        /* border: 1px solid red; */
+        height: 30px;
+        width: 30px;
+        margin-top: 13%;
+    }
+    .texTofCreate h1 {
+        font-size: large;
+    }
+
+    .continueWithGoogle button {
+        height: 40px;
+        width: 250px;
+        font-size: 14px;
+    }
+
+    .googleIconwithCotinue {
+        height: 40px;
+        width: 250px;
+        font-size: 14px;
+    }
+
+    .goToLoginPage p {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    
+    .emailLable {
+        position: absolute;
+        left: 60px;
+        /* right: 10px; */
+        top: -26px
+    }
+
+    .passwordLable {
+        position: absolute;
+        left: 60px;
+        /* right: 10px; */
+        top: -26px
+    }
+}
+
+@media only screen and (max-width: 317px) {
+    .createAccountDiv {
+        width: 230px;
+        margin: 150px auto;
+    }
+
+    form>div>div>input {
+        height: 35px;
+        width: 200px;
+        font-weight: 400;
+        padding-left: 10px;
+
+    }
+
+    .eyeLogo {
+        position: absolute;
+        left: 185px;
+        top: 10px;
+        cursor: pointer;
+
+    }
+
+    .texTofCreate h1 {
+        font-size: large;
+    }
+
+    .continueWithGoogle button {
+        height: 35px;
+        width: 200px;
+        font-size: 14px;
+    }
+
+    .googleIconwithCotinue {
+        height: 35px;
+        width: 200px;
+        font-size: 14px;
+    }
+
+    .goToLoginPage p {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .emailLable {
+        position: absolute;
+        left: 30px;
+        /* right: 10px; */
+        top: -26px
+    }
+
+    .passwordLable {
+        position: absolute;
+        left: 30px;
+        /* right: 10px; */
+        top: -26px
+    }
+}

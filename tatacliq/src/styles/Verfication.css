@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+input[type=password]::-ms-reveal,
+input[type=password]::-ms-clear {
+    display: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.verification_texTofCreate {
+    margin-top: 22px;
+    margin-bottom: 15px;
+}
+
+.verification_texTofCreate h1 {
+    margin-top: 22px;
+}
+
+
+.verification_container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(/images/backGroundImage.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.verification_createAccountDiv {
+    height: fit-content;
+    margin: auto;
+    width: 600px;
+    border-radius: 25px;
+    backdrop-filter: brightness(1.1);
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    box-shadow: rgba(0, 0, 0, .16) 0px 1px 4px;
+}
+
+.verification_formDetails>form {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 25px;
+    /* flex-direction: column; */
+}
+
+.verification_formDetails>form>div>input {
+    /* border: none; */
+    height: 40px;
+    border-radius: 7px;
+    font-weight: 400;
+    outline: none;
+    width: 100%;
+    padding-left: 7px;
+
+}
+
+.verification_formDetails>form>div {
+    width: 35px;
+}
+
+
+.continueWithGoogle {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.continueWithGoogle button {
+    height: 40px;
+    width: 380px;
+    border-radius: 9px;
+    outline: none;
+    border: none;
+    background-color: #0024b4;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+
+.verification_googleIconwithCotinue {
+    height: 40px;
+    width: 380px;
+    border: none;
+    border-radius: 9px;
+    background-color: #0024b4;
+    color: white;
+    font-size: medium;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.verification_goToLoginPage {
+    margin-bottom: 30px
+}
+
+
+
+.verification_goToLoginPage a {
+    text-decoration: none;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .verification_createAccountDiv {
+        width: 400px;
+        margin: 200px auto;
+    }
+
+    .verification_formDetails form>div>input {
+        height: 35px;
+        /* width: 300px; */
+        font-weight: 400;
+
+    }
+
+    .verification_texTofCreate h1 {
+        font-size: x-large;
+    }
+
+    .continueWithGoogle button {
+        height: 40px;
+        width: 330px;
+        font-size: 16px;
+    }
+
+    .verification_googleIconwithCotinue {
+        height: 40px;
+        width: 330px;
+        font-size: medium;
+    }
+
+    .verification_goToLoginPage p {
+        font-size: 13px;
+        font-weight: 500;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .verification_createAccountDiv {
+        width: 310px;
+        margin: 200px auto;
+    }
+
+    .verification_formDetails form>div>input {
+        height: 35px;
+        font-weight: 400;
+
+    }
+
+    .verification_texTofCreate h1 {
+        font-size: large;
+    }
+
+    .continueWithGoogle button {
+        height: 40px;
+        width: 250px;
+        font-size: 14px;
+    }
+
+    .verification_googleIconwithCotinue {
+        height: 40px;
+        width: 250px;
+        font-size: 14px;
+    }
+
+    .verification_goToLoginPage p {
+        font-size: 12px;
+        font-weight: 500;
+    }
+}
+
+@media only screen and (max-width: 317px) {
+    .verification_createAccountDiv {
+        width: 230px;
+        margin: 200px auto;
+    }
+
+    .verification_formDetails form>div>input {
+        height: 35px;
+        font-weight: 400;
+    }
+
+    .verification_texTofCreate h1 {
+        font-size: large;
+    }
+
+    .continueWithGoogle button {
+        height: 35px;
+        width: 200px;
+        font-size: 14px;
+    }
+
+    .verification_googleIconwithCotinue {
+        height: 35px;
+        width: 200px;
+        font-size: 14px;
+    }
+
+    .verification_goToLoginPage p {
+        font-size: 12px;
+        font-weight: 500;
+ }
+}
