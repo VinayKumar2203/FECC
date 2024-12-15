@@ -1,0 +1,278 @@
+/* Register Page css here */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif;    */
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.texTofCreate {
+  margin-top: 22px;
+  margin-bottom: 15px;
+}
+
+.texTofCreate h1 {
+  margin-top: 22px;
+}
+
+.container {
+  width: 100%;
+  /* height: 100vh; */
+  min-height: 100vh;
+  background-image: url(/images/backGroundImage.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.createAccountDiv {
+  /* some change */
+  height: fit-content;
+  margin: auto;
+  /* some change */
+  width: 600px;
+  border-radius: 25px;
+  backdrop-filter: brightness(1.1);
+  /* backdrop-filter: blur(15px); */
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.formDetails form {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+}
+
+form > div > input {
+  border: none;
+  height: 40px;
+  border-radius: 7px;
+  padding-left: 23px;
+  width: 350px;
+  font-weight: 400;
+  outline: none;
+}
+
+.googleIcon {
+  height: 15px;
+  text-align: center;
+  width: 15px;
+  margin: auto;
+}
+
+.continueWithGoogle {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.continueWithGoogle button {
+  height: 40px;
+  width: 380px;
+  border-radius: 9px;
+  outline: none;
+  border: none;
+  background-color: #0024b4;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.googleIconwithCotinue {
+  height: 40px;
+  width: 380px;
+  border: none;
+  border-radius: 9px;
+  background-color: black;
+  color: white;
+  font-size: medium;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.goToLoginPage {
+  margin-bottom: 30px;
+}
+
+.goToLoginPage p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.goToLoginPage a {
+  text-decoration: none;
+}
+
+.passwordID {
+  position: relative;
+}
+
+.eyeLogo {
+  position: absolute;
+  left: 440px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.eyeLogo img {
+  height: 20px;
+  width: 20px;
+}
+
+.errorShow {
+  color: rgb(250, 246, 10);
+  display: none;
+}
+.errorShowOfPhone {
+  color: rgb(250, 246, 10);
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .createAccountDiv {
+    width: 400px;
+    margin: 200px auto;
+  }
+
+  form > div > input {
+    height: 35px;
+    width: 300px;
+    font-weight: 400;
+  }
+
+  .eyeLogo {
+    position: absolute;
+    left: 315px;
+    top: 10px;
+    cursor: pointer;
+  }
+
+  .texTofCreate h1 {
+    font-size: x-large;
+  }
+
+  .continueWithGoogle button {
+    height: 40px;
+    width: 330px;
+    font-size: 16px;
+  }
+
+  .googleIconwithCotinue {
+    height: 40px;
+    width: 330px;
+    font-size: medium;
+  }
+
+  .goToLoginPage p {
+    font-size: 13px;
+    font-weight: 500;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .createAccountDiv {
+    width: 310px;
+    margin: 200px auto;
+  }
+
+  form > div > input {
+    height: 35px;
+    width: 220px;
+    font-weight: 400;
+  }
+
+  .eyeLogo {
+    position: absolute;
+    left: 235px;
+    top: 10px;
+    cursor: pointer;
+  }
+
+  .texTofCreate h1 {
+    font-size: large;
+  }
+
+  .continueWithGoogle button {
+    height: 40px;
+    width: 250px;
+    font-size: 14px;
+  }
+
+  .googleIconwithCotinue {
+    height: 40px;
+    width: 250px;
+    font-size: 14px;
+  }
+
+  .goToLoginPage p {
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+
+@media only screen and (max-width: 317px) {
+  .createAccountDiv {
+    width: 230px;
+    margin: 200px auto;
+  }
+
+  form > div > input {
+    height: 35px;
+    width: 200px;
+    font-weight: 400;
+    padding-left: 10px;
+  }
+
+  .eyeLogo {
+    position: absolute;
+    left: 185px;
+    top: 10px;
+    cursor: pointer;
+  }
+
+  .texTofCreate h1 {
+    font-size: large;
+  }
+
+  .continueWithGoogle button {
+    height: 35px;
+    width: 200px;
+    font-size: 14px;
+  }
+
+  .googleIconwithCotinue {
+    height: 35px;
+    width: 200px;
+    font-size: 14px;
+  }
+
+  .goToLoginPage p {
+    font-size: 12px;
+    font-weight: 500;
+  }
+}

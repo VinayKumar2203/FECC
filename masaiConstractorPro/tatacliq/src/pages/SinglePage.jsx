@@ -35,8 +35,9 @@ const SinglePage = () => {
                 <br />
                 <div><button style={{ padding: '7px' }} ><Link to='/addtocart'>GOtocart</Link></button></div>
                 <br />
-                <div><button style={{ padding: '7px' }} ><Link to={payment / ${single.id}}>payNow</Link></button></div>
-            <div><button style={{ padding: '7px' }} onClick={handleAddTocart} >addToCard</button></div>
+                <div><button style={{ padding: '7px' }} ><Link to=''>payNow</Link></button></div>
+                <div><button style={{ padding: '7px' }} onClick={handleAddTocart} >addToCard</button></div>
+            </div>
         </div>
 
     )

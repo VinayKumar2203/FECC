@@ -1,0 +1,67 @@
+/* Base Styles */
+.footer {
+    background-color: #f9f9f9;
+    padding: 20px 40px;
+    color: #333;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap; /* Makes the layout responsive */
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .footer-section {
+    flex: 1 1 200px; /* Flex-basis ensures minimum width */
+    min-width: 200px; /* Prevent sections from shrinking too much */
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section a:hover {
+    color: #0071e3; /* Add hover effect for links */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column; /* Stack sections vertically */
+      gap: 30px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer {
+      padding: 20px;
+    }
+  
+    .footer-section h4 {
+      font-size: 14px;
+    }
+  
+    .footer-section li {
+      margin-bottom: 8px;
+    }
+  }
+  

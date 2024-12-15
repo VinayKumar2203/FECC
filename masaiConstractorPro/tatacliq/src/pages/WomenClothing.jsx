@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react'
+// import { Link } from 'react-router-dom';
 
-const Electronics = () => {
+const WomenClothing = () => {
     const [getdata, setGetData] = useState([]);
 
     useEffect(() => {
@@ -17,15 +17,15 @@ const Electronics = () => {
             <h1>Electronic</h1>
             <div className='cardBox' >
                 {
-                    getdata?.map((item) => (
-                        <div className='itemCard' key={item.id} >
-                            <Link to={item.id}>
-                                <img style={{ width: '150px' }} src={item.image} alt="" />
-                                <p><strong>Price</strong>{item.price}</p>
-                                <p> <strong>Rating</strong>:- {item.rating.rate}⭐,<strong>People</strong>:-{item.rating.count}</p>
+                    getdata.map((item) => (
 
-                            </Link>
+                        <div className='itemCard' key={item.id} >
+                            <img style={{ width: '150px' }} src={item.image} alt="" />
+                            <p><strong>Price</strong>{item.price}</p>
+                            <p> <strong>Rating</strong>:- {item.rating.rate}⭐,<strong>People</strong>:-{item.rating.count}</p>
+
                         </div>
+
                     ))
                 }
             </div>
@@ -33,4 +33,4 @@ const Electronics = () => {
     )
 }
 
-export default Electronics
+export default WomenClothing
